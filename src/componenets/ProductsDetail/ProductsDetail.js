@@ -22,7 +22,7 @@ class ProductsDetail extends React.Component {
                             <img src={product.image} className="hidden content" alt={product.product}/>
                     </div>
                     <div className="content">
-                        <a className="header">{product.product}</a>
+                        <div className="header">{product.product}</div>
                         <div className="meta">
                             <span className="date">{product.description}</span>
                         </div>
