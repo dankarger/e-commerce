@@ -19,7 +19,7 @@ class NavBar extends React.Component {
                 </div>
                 <div className="ui bottom fixed menu">
                     <div className="item">
-                        <img src="/images/logo.png"/>
+                        {/*<img src="/images/logo.png"/>*/}
                     </div>
                     {/*<a className="item">Features</a>*/}
                     {/*<a className="item">Testimonials</a>*/}
