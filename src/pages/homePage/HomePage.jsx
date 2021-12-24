@@ -9,9 +9,17 @@ render(){
         <div>
          <div className="category-div">
              homePage
-        <Link to='/products'>
-            <div>Products</div>
-        </Link>
+             <div>
+                 <Link to='/products'>
+                     <div>Products</div>
+                 </Link>
+             </div>
+
+             <div>
+                 <Link to='/clothes'>
+                     <div>Clothes</div>
+                 </Link>
+             </div>
          </div>
         </div>
     )

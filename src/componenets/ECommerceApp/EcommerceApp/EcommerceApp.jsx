@@ -6,6 +6,7 @@ import HomePage from "../../../pages/homePage/HomePage";
 import Products from "../../../pages/products/Products";
 
 import ProductDetailWrapper from "../../ProductsDetail/ProductsDetailWrapper";
+import ClothesPage from "../../../pages/ClothesPage/ClothesPage";
 
 
 class EcommerceApp extends React.Component {
@@ -19,6 +20,7 @@ class EcommerceApp extends React.Component {
                         <Route path='/' exact element={<HomePage />} />
                         <Route path='/products' exact element={<Products />} />
                         <Route path='/products/:id' exact element={<ProductDetailWrapper/>} />
+                        <Route path='/clothes' exact element={<ClothesPage />} />
                         {/*<Route path='/edit/:id' element={<EditPageWrapper />} />*/}
                         {/*<Route path='/create/:id' element={<EditPageWrapper />} />*/}
                     </Routes>
