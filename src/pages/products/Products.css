@@ -1,0 +1,22 @@
+.products-div {
+    margin-top:5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.product-content {
+    padding:3rem;
+}
+.products-div  .card {
+    min-height: 10rem;
+    margin-left:0.2rem;
+    transition: 200ms ease-in;
+
+}
+.products-div  .card:hover {
+    transform: scale(1.01);
+    opacity: 0.8;
+    filter:brightness(90%);
+}
