@@ -2,6 +2,7 @@ import React from "react";
 import './ClothsPage.css'
 import {Link} from "react-router-dom";
 import {getDataBase} from "../../componenets/Api/Api";
+import Button from "../../componenets/Button/Button";
 
 class ClothesPage extends React.Component {
     state={data:[]}
@@ -41,6 +42,9 @@ class ClothesPage extends React.Component {
                                 </div>
                             </div>
                         </Link>
+                        <div>
+                            <Button name='Add to Cart' callback={()=>this.props.callback(product)}/>
+                        </div>
                     </div>
                 )
             })

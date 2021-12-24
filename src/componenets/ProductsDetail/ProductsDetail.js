@@ -33,7 +33,7 @@ class ProductsDetail extends React.Component {
                             {product.price}
                         </div>
                         <div>
-                            <Button name='Add to Cart' callback={this.props.callback}/>
+                            <Button name='Add to Cart' callback={()=>this.props.callback(product)}/>
                         </div>
                     </div>
                 </div>

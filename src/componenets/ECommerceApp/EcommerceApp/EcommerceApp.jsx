@@ -10,9 +10,13 @@ import ClothesPage from "../../../pages/ClothesPage/ClothesPage";
 
 
 class EcommerceApp extends React.Component {
-
-    addCart=()=>{
+        state={cart:[]}
+    addCart=(product)=>{
         console.log('cart')
+        let cartItems = this.state.cart;
+
+        cartItems.push(product)
+        this.setState({cart:cartItems},()=>console.log(cartItems))
     }
 
 
@@ -20,14 +24,14 @@ class EcommerceApp extends React.Component {
         return(
             <div>
                 <BrowserRouter >
-                    <NavBar />
+                    <NavBar cart={this.state.cart}/>
                     <Routes>
                         <Route path='/' exact element={<HomePage />} />
-                        <Route path='/products' exact element={<Products />} />
+                        <Route path='/products' exact element={<Products callback={this.addCart}/>} />
                         <Route path='/products/:id' exact element={<ProductDetailWrapper callback={this.addCart} type='products'/>} />
-                        <Route path='/clothes' exact element={<ClothesPage />} />
+                        <Route path='/clothes' exact element={<ClothesPage callback={this.addCart} />} />
                         <Route path='/clothes/:id' exact element={<ProductDetailWrapper callback={this.addCart}  type='clothes'/>} />
-                        {/*<Route path='/edit/:id' element={<EditPageWrapper />} />*/}
+                        <Route path='/cart' exact element={<Products callback={this.addCart}/>} />
                         {/*<Route path='/create/:id' element={<EditPageWrapper />} />*/}
                     </Routes>
                 </BrowserRouter>

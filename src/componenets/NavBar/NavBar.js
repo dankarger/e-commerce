@@ -18,12 +18,17 @@ class NavBar extends React.Component {
                     <Link to='/products' className="item">Products</Link>
                     <Link to='/clothes' className="item">Clothes</Link>
                     {/*<Link to='/vehicles' className="item">Vehicles</Link>*/}
+                    <div> <Cart cart={this.props.cart}/></div>
+                    <Link to='/cart' className="item">Cart</Link>
+
                 </div>
+                <div> <Cart /></div>
                 <div className="ui bottom fixed menu">
+                    <div>Footer</div>
                     <div className="item">
                         {/*<img src="/images/logo.png"/>*/}
                     </div>
-                  <div><Cart /></div>
+                  <div> <Cart /></div>
                 </div>
                 <p></p>
                 <p></p>
