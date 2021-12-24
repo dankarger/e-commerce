@@ -2,7 +2,6 @@ import React from "react";
 import './ProductsDetail.css'
 import {findProduct} from "../Api/Api";
 import Button from "../Button/Button";
-import Cart from "../Cart/Cart";
 
 class ProductsDetail extends React.Component {
         state={product:[]}
@@ -19,8 +18,8 @@ class ProductsDetail extends React.Component {
             <div className='Product-detail'>
                 <div className="ui card">
                     <div className="ui slide masked reveal image">
-                        <img src={product.image} className="visible content"/>
-                            <img src={product.image} className="hidden content"/>
+                        <img src={product.image} className="visible content" alt={product.product}/>
+                            <img src={product.image} className="hidden content" alt={product.product}/>
                     </div>
                     <div className="content">
                         <a className="header">{product.product}</a>
@@ -40,12 +39,12 @@ class ProductsDetail extends React.Component {
                 </div>
 
                 <div className="ui segment">
-                    <img className={product.image}/>
+                    <img className={product.image} alt={product.product}/>
                         <p>Te eum doming eirmod, nominati pertinacia argumentum ad his. Ex eam alia facete scriptorem,
                             est autem aliquip detraxit at. Usu ocurreret referrentur at, cu epicurei appellantur vix.
                             Cum ea laoreet recteque electram, eos choro alterum definiebas in. Vim dolorum definiebas
                             an. Mei ex natum rebum iisque.</p>
-                        <img className="ui small right floated image" src={product.image}/>
+                        <img className="ui small right floated image" src={product.image} alt={product.product}/>
                             <p>Audiam quaerendum eu sea, pro omittam definiebas ex. Te est latine definitiones. Quot
                                 wisi nulla ex duo. Vis sint solet expetenda ne, his te phaedrum referrentur
                                 consectetuer. Id vix fabulas oporteat, ei quo vide phaedrum, vim vivendum maiestatis
@@ -57,10 +56,10 @@ class ProductsDetail extends React.Component {
                 </div>
 
                 <div className="ui small images">
-                    <img src={product.image}/>
-                        <img src={product.image}/>
-                            <img src={product.image}/>
-                                <img src={product.image}/>
+                    <img src={product.image} alt={product.product}/>
+                        <img src={product.image} alt={product.product}/>
+                            <img src={product.image} alt={product.product}/>
+                                <img src={product.image} alt={product.product}/>
                 </div>
             </div>
         )
