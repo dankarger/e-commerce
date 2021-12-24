@@ -19,7 +19,7 @@ class ClothesPage extends React.Component {
             this.state.data.map(product=>{
                 return(
                     <div key={product.uuid}>
-                        <Link to={`/products/${product.id}`}>
+                        <Link to={`/clothes/${product.id}`}>
                             <div className="ui card card2">
                                 <div className="image">
                                     <img src={product.image} alt={"dsds"}/>
@@ -44,14 +44,13 @@ class ClothesPage extends React.Component {
                     </div>
                 )
             })
-
         )
     }
 
     render(){
         return(
             <div className='product-content'>
-                <h1>Products</h1>
+                <h1>Clothes</h1>
                 <div className="products-div">
 
                     {this.injectProducts()}

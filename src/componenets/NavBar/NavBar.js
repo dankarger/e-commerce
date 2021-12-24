@@ -1,6 +1,7 @@
 import React from "react";
 import './NavBar.css'
 import {Link} from "react-router-dom";
+import Cart from "../Cart/Cart";
 
 class NavBar extends React.Component {
 
@@ -15,15 +16,14 @@ class NavBar extends React.Component {
                     </div>
                     <Link to='/' className="item">Home</Link>
                     <Link to='/products' className="item">Products</Link>
+                    <Link to='/clothes' className="item">Clothes</Link>
                     {/*<Link to='/vehicles' className="item">Vehicles</Link>*/}
                 </div>
                 <div className="ui bottom fixed menu">
                     <div className="item">
                         {/*<img src="/images/logo.png"/>*/}
                     </div>
-                    {/*<a className="item">Features</a>*/}
-                    {/*<a className="item">Testimonials</a>*/}
-                    {/*<a className="item">Sign-in</a>*/}
+                  <div><Cart /></div>
                 </div>
                 <p></p>
                 <p></p>

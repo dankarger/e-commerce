@@ -11,6 +11,11 @@ import ClothesPage from "../../../pages/ClothesPage/ClothesPage";
 
 class EcommerceApp extends React.Component {
 
+    addCart=()=>{
+        console.log('cart')
+    }
+
+
     render() {
         return(
             <div>
@@ -19,8 +24,9 @@ class EcommerceApp extends React.Component {
                     <Routes>
                         <Route path='/' exact element={<HomePage />} />
                         <Route path='/products' exact element={<Products />} />
-                        <Route path='/products/:id' exact element={<ProductDetailWrapper/>} />
+                        <Route path='/products/:id' exact element={<ProductDetailWrapper callback={this.addCart} type='products'/>} />
                         <Route path='/clothes' exact element={<ClothesPage />} />
+                        <Route path='/clothes/:id' exact element={<ProductDetailWrapper callback={this.addCart}  type='clothes'/>} />
                         {/*<Route path='/edit/:id' element={<EditPageWrapper />} />*/}
                         {/*<Route path='/create/:id' element={<EditPageWrapper />} />*/}
                     </Routes>
