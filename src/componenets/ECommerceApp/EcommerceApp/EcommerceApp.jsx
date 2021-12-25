@@ -45,7 +45,7 @@ class EcommerceApp extends React.Component {
         return(
             <div>
                 <BrowserRouter >
-                    <NavBar cart={this.state.cart} cartNumber={this.state.cart.length} callback={this.toggleCartWindow}/>
+                    <NavBar cart={this.state.cart}  callback={this.toggleCartWindow}/>
                     {this.state.isCartWindow &&  <Cart callback={this.removeCartItem} cart={this.state.cart} />}
                     <Routes>
                         <Route path='/' exact element={<HomePage />} />
