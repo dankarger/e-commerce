@@ -31,7 +31,7 @@ state={cart:[],cartTotal:11}
             <div>
 
                 <div className=" cart" key={item.uuid+index}>
-                    <img className="ui avatar image" src={item.image} alt{item.product}/>
+                    <img className="ui avatar image" src={item.image} alt={item.product}/>
                     <div className="content cart">
                         <div className="header">{item.product}</div>
                         <div className="description">{item.description.substr(0,10)} <div><b>
