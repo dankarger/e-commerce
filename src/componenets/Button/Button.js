@@ -6,7 +6,7 @@ export default function Button({ name,callback,icon,className }) {
 
     return(
         <>
-            <button className={' ui button '+ {className}} onClick={callback}>  <span>{icon}</span>{name}  </button>
+            <button className={' ui button '+ className} onClick={callback}>  <span>{icon}</span>{name}  </button>
         </>
     )
 }

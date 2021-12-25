@@ -1,0 +1,22 @@
+#navBar {
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+#navBar .item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition:300ms ease-in;
+    border:1px solid transparent;
+}
+#navBar .item:hover {
+    opacity: 0.8;
+    background: #61dafb;
+    border:1px solid #b4b1b1
+}
+.filler-div {
+    width:20%;
+    height:100%;
+}

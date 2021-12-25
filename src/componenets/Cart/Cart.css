@@ -1,0 +1,38 @@
+.Cart {
+    overflow-y: scroll;
+    margin-top: 5rem;
+    position: fixed;
+    right:10px;
+    top:0;
+    width: 50%;
+    height: 50%;
+    border: 3px solid #807a7a;
+    box-shadow: 1px 2px 20px #eee5e5;
+    z-index: 140;
+    background: rgb(238, 231, 231);
+    transform: translateX( 500px);
+    transition: 1s ease-in;
+    animation: slide-in 400ms forwards ease-in;
+    padding:1rem;
+
+
+}
+.Cart h3 {
+    text-decoration: underline;
+}
+
+.Cart .cartContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.cart {
+    flex-direction: row;
+}
+@keyframes slide-in {
+    to{
+        transform: translateX( 20px);
+    }
+
+}
