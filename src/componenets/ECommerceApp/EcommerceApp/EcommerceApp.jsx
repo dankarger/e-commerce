@@ -33,7 +33,7 @@ class EcommerceApp extends React.Component {
         const localCart =  localStorage.getItem('Cart') ;
         console.log(JSON.parse(localCart))
 
-        if(localCart.length>0) {
+        if(localCart) {
             this.setState({cart: JSON.parse(localCart)})
         }
     }
