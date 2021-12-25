@@ -28,9 +28,8 @@ state={cart:[],cartTotal:11}
     return this.state.cart.map((item,index)=>{
         // sum+=item.price
         return (
-            <div>
-
-                <div className=" cart" key={item.uuid+index}>
+            <div className=" cart" key={item.uuid}>
+                <div >
                     <img className="ui avatar image" src={item.image} alt={item.product}/>
                     <div className="content cart">
                         <div className="header">{item.product}</div>
