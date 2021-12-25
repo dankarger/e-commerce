@@ -15,7 +15,8 @@ class EcommerceApp extends React.Component {
         console.log('cart')
         let cartItems = this.state.cart;
         cartItems.push(product)
-        this.setState({cart:cartItems},()=>console.log(cartItems))
+        this.setState({cart:cartItems},()=>console.log(cartItems));
+        this.updateLocalStorage()
     }
     removeCartItem=(id)=>{
 
@@ -23,12 +24,23 @@ class EcommerceApp extends React.Component {
             return item.id!==id
         })
         this.setState({cart:newCart},()=>console.log(newCart))
+        this.updateLocalStorage()
     }
     toggleCartWindow=()=>{
             this.setState((prev)=>{return {isCartWindow:!this.state.isCartWindow}},()=>console.log(this.state.isCartWindow))
     }
+    componentDidMount() {
+        const localCart =  localStorage.getItem('Cart') ;
+        console.log(JSON.parse(localCart))
 
-
+        if(localCart.length>0) {
+            this.setState({cart: JSON.parse(localCart)})
+        }
+    }
+    updateLocalStorage=()=>{
+        localStorage.setItem('Cart', JSON.stringify(this.state.cart));
+        console.log(localStorage)
+    }
     render() {
         return(
             <div>

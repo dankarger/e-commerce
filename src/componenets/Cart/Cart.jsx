@@ -6,25 +6,36 @@ import Button from "../Button/Button";
 
 class Cart extends React.Component {
 
-state={cart:[]}
+state={cart:[],cartTotal:11}
 
 
     componentDidMount() {
     this.setState({cart:this.props.cart},()=>console.log('cartd',this.state.cart))
+        this.updateCartTotal()
     }
-    componentDidUpdate(prevProps, prevState, snapshot) {
 
+    updateCartTotal=()=>{
+        let sum=0
+        this.state.cart.forEach(item=>{
+            sum+=1
+        })
+        this.setState({cartTotal:sum})
     }
+
+
     injectCartItems=()=>{
+
     return this.state.cart.map((item,index)=>{
-        return(
+        // sum+=item.price
+        return (
             <div>
+
                 <div className=" cart" key={item.uuid+index}>
                     <img className="ui avatar image" src={item.image}/>
                     <div className="content cart">
                         <div className="header">{item.product}</div>
-                        <div className="description">{item.description.substr(0,10)} <div><b>Arrested
-                            Development</b></div> just now.
+                        <div className="description">{item.description.substr(0,10)} <div><b>
+                           $ {item.price}</b></div> just now.
                         </div>
                     </div>
                 </div>
@@ -34,10 +45,7 @@ state={cart:[]}
             <hr/>
             </div>
         )
-
-
     })
-
     }
 
     render() {
@@ -48,15 +56,8 @@ state={cart:[]}
                 <div className="Cart-items-div">
                     <div className="ui list">
                         {this.injectCartItems()}
-                        {/*<div className="item">*/}
-                        {/*    <img className="ui avatar image" src="/images/avatar2/small/rachel.png"/>*/}
-                        {/*        <div className="content">*/}
-                        {/*            <div className="header">Rachel</div>*/}
-                        {/*            <div className="description">Last seen watching <a><b>Arrested*/}
-                        {/*                Development</b></a> just now.*/}
-                        {/*            </div>*/}
-                        {/*        </div>*/}
-                        {/*</div>*/}
+                        <hr/>
+                        <div>Total: $ {this.state.cartTotal}</div>
                     </div>
 
                 </div>
