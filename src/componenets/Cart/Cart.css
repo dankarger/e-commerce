@@ -9,7 +9,7 @@
     border: 3px solid #807a7a;
     box-shadow: 1px 2px 20px #eee5e5;
     z-index: 140;
-    background: rgb(238, 231, 231);
+    background: rgb(255, 255, 255);
     transform: translateX( 500px);
     transition: 1s ease-in;
     animation: slide-in 400ms forwards ease-in;
