@@ -1,7 +1,6 @@
 import React from "react";
 import './NavBar.css'
 import {Link} from "react-router-dom";
-import Cart from "../Cart/Cart";
 import Button from "../Button/Button";
 
 class NavBar extends React.Component {
