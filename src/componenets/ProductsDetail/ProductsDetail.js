@@ -25,7 +25,7 @@ class ProductsDetail extends React.Component {
                         <div className="header">{product.product}</div>
                         <div className="meta">
                             <span className="date">{product.description}</span>
-                        </div>
+                           </div>
                     </div>
                     <div className="extra content">
                         <div>
